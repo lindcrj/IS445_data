@@ -14,7 +14,7 @@
     const vegaLiteSpec = {
       "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
       "data": {
-        "url": "your-data.json" // Provide the URL to your data file
+        "url": "https://raw.githubusercontent.com/lindcrj/IS445_data/main/vegalite_visualization.json" // Provide the URL to your data file
       },
       "mark": "point",
       "encoding": {
