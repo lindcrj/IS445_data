@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vega-Lite Visualization</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    // Define your Vega-Lite specification as a JavaScript object
+    const vegaLiteSpec = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "data": {
+        "url": "your-data.json" // Provide the URL to your data file
+      },
+      "mark": "point",
+      "encoding": {
+        "x": {"field": "X", "type": "quantitative"},
+        "y": {"field": "Y", "type": "quantitative"}
+      }
+    };
+
+    // Embed the Vega-Lite visualization
+    vegaEmbed('#vis', vegaLiteSpec);
+  </script>
+</body>
+</html>
